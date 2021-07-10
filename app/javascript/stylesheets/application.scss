@@ -13,3 +13,9 @@ $fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
 .pulsing-text {
   @apply animate-pulse font-bold text-gray-200 text-2xl mb-6;
 }
+
+.cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}

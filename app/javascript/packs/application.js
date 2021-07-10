@@ -4,7 +4,6 @@ import Rails, { CableCar } from 'mrujs'
 import Turbolinks from 'turbolinks'
 import CableReady from 'cable_ready'
 import AudioOperations from '@cable_ready/audio_operations'
-import debounced from 'debounced'
 import '@fortawesome/fontawesome-free/js/solid'
 
 import 'channels'
@@ -17,5 +16,4 @@ Rails.start({
   plugins: [new CableCar(CableReady)]
 })
 Turbolinks.start()
-debounced.initialize()
 CableReady.addOperations(AudioOperations)
