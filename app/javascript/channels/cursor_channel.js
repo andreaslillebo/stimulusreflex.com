@@ -1,45 +1,26 @@
 import consumer from './consumer'
+import rotateRGBHue from '../lib/color'
+import throttle from '../lib/throttle'
 import CableReady from 'cable_ready'
-
-function throttle (callback, interval) {
-  let enableCall = true
-
-  return function (...args) {
-    if (!enableCall) return
-
-    enableCall = false
-    callback.apply(this, args)
-    setTimeout(() => (enableCall = true), interval)
-  }
-}
-
-const deg = Math.PI / 180
-
-function rotateRGBHue (r, g, b, hue) {
-  const cosA = Math.cos(hue * deg)
-  const sinA = Math.sin(hue * deg)
-  const neo = [
-    cosA + (1 - cosA) / 3,
-    (1 - cosA) / 3 - Math.sqrt(1 / 3) * sinA,
-    (1 - cosA) / 3 + Math.sqrt(1 / 3) * sinA
-  ]
-  const result = [
-    r * neo[0] + g * neo[1] + b * neo[2],
-    r * neo[2] + g * neo[0] + b * neo[1],
-    r * neo[1] + g * neo[2] + b * neo[0]
-  ]
-  return result.map(x => uint8(x))
-}
-
-function uint8 (value) {
-  return 0 > value ? 0 : 255 < value ? 255 : Math.round(value)
-}
 
 const createCursor = id => {
   const clone = document
     .getElementById('being')
     .content.firstElementChild.cloneNode(true)
   const svg = document.body.appendChild(clone)
+  const hue = Math.floor(Math.random() * 360)
+  const color = {
+    '#BA6598': rotateRGBHue(186, 101, 152, hue),
+    '#FFD9F0': rotateRGBHue(255, 217, 240, hue),
+    '#E096C3': rotateRGBHue(224, 150, 195, hue),
+    '#F5B9DD': rotateRGBHue(245, 185, 221, hue),
+    '#F0F0F0': rotateRGBHue(240, 240, 240, hue),
+    white: rotateRGBHue(255, 255, 255, hue)
+  }
+  svg.querySelectorAll('[fill]').forEach(f => {
+    const rgb = color[f.getAttribute('fill')]
+    f.setAttribute('fill', `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`)
+  })
   svg.id = id
   svg.classList = 'cursor'
   return svg
