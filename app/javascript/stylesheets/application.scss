@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Work+Sans:wght@400;500;600;700&display=swap');
+$fa-font-path: '../../../node_modules/@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.btn {
+  @apply px-4 py-2 bg-pink-600 text-white rounded;
+}
+
+.pulsing-text {
+  @apply animate-pulse font-bold text-gray-200 text-2xl mb-6;
+}

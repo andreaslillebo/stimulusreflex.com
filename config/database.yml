@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: stimulusreflexcom_development
+
+test:
+  <<: *default
+  database: stimulusreflexcom_test
+
+production:
+  <<: *default
+  database: stimulusreflexcom_production
+  username: stimulusreflexcom
+  password: <%= ENV['STIMULUSREFLEX_DATABASE_PASSWORD'] %>
