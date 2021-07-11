@@ -15,7 +15,7 @@ const createCursor = id => {
     '#E096C3': rotateRGBHue(224, 150, 195, hue),
     '#F5B9DD': rotateRGBHue(245, 185, 221, hue),
     '#F0F0F0': rotateRGBHue(240, 240, 240, hue),
-    white: rotateRGBHue(255, 255, 255, hue)
+    white: [255, 255, 255]
   }
   svg.querySelectorAll('[fill]').forEach(f => {
     const rgb = color[f.getAttribute('fill')]
@@ -38,8 +38,18 @@ const cursorChannel = consumer.subscriptions.create('CursorChannel', {
       if (data.session === session) return
       const el =
         document.getElementById(data.session) || createCursor(data.session)
-      el.style.left = data.x + 'px'
-      el.style.top = data.y + 'px'
+      if (data.x <= window.innerWidth - 30) {
+        el.style.display = 'block'
+        el.style.left = data.x + 'px'
+        el.style.top = data.y + 'px'
+      } else {
+        el.style.display = 'none'
+      }
+      document.dispatchEvent(
+        new CustomEvent('being:moved', {
+          detail: { x: data.x, y: data.y }
+        })
+      )
     }
   }
 })
