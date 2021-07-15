@@ -1,10 +1,49 @@
-<div class="font-sans bg-white h-screen flex flex-col w-full">
-  <div class="h-screen bg-transparent bg-gradient-to-r from-green-400 to-blue-500">
-    <div class="px-4 py-48">
-     <div class="relative w-full text-center">
-       <h1 class="pulsing-text">StimulusReflex</h1>
-       <button class="btn" data-reflex="click->Test#test"><i class="fas fa-bug"></i> Console Log Test</button>
+<div class="h-full font-sans text-lg font-medium leading-8 tracking-tighter text-gray-800 bg-white">
+  <div class="container flex justify-between pl-0 mx-auto mb-10">
+    <%= image_tag "logo.svg" %>
+    <nav class="flex items-center space-x-2">
+      <a href="#" class="flex items-center text-purple-600 border-2 border-purple-300 rounded-lg">
+        <span class="p-1.5 pr-2">
+          <%= image_tag "github_logo.svg" %>
+        </span>
+        <span class="flex items-center pl-2 border-l-2 border-purple-300 ">
+          <i class="text-sm fas fa-star"></i>
+          <%#
+            TODO:
+            Dynamically fetch star count from:
+            https://api.github.com/repos/stimulusreflex/stimulus_reflex stargazers_count
+          %>
+          <span class="px-4 py-1 pl-2 text-lg font-semibold">1.8k</span>
+        </span>
+      </a>
+      <a href="#" class="inline-block px-4 py-1 text-lg font-semibold text-purple-600 bg-purple-300 border-2 border-purple-300 border-purple-400 rounded-lg">
+        Documentations
+      </a>
+    </nav>
+  </div>
+  <div class="container relative mx-auto">
+    <%= image_tag "request_cycle.svg", class: "float-right absolute right-0" %>
+    <h1 class="pt-20 mb-4 font-semibold text-purple-600 leading-20 text-7xl">
+      Return to the<br />
+      Golden Era of<br />
+      Web Development
+    </h1>
+    <h2 class="mb-6 text-2xl leading-8">
+      Build reactive apps with a<br />
+      server-rendered architecture.
+    </h2>
+    <a href="#" class="inline-block px-6 py-4 mb-12 text-2xl font-semibold text-purple-300 bg-purple-600 rounded-lg">Free Britney Now!</a>
+    <%= image_tag "chevron_down", class: "mb-16" %>
+  </div>
+  <div class="container mx-auto">
+    <div class="flex items-start">
+      <p>
+        StimulusReflex is an implementation for classic Rails architecture: Server sends a whole HTML to the browser, the browser displays it as is, JS listens to user’s input, notifies about them the server (Stimulus), server reacts on them appropriately and responds with a new page, or a piece of page to be rerendered (Reflex).
+      </p>
+      <div class="relative -mr-16">
+        <%= image_tag "stimulus_cycle", class: "max-w-none relative left-4" %>
+        <%= image_tag "beast_with_laptop", class: "max-w-none relative -top-20" %>
+      </div>
     </div>
-   </div>
   </div>
 </div>

@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
   mode: 'jit',
   purge: {
@@ -11,16 +9,54 @@ module.exports = {
     ]
   },
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '2.5rem',
+        xl: '2.5rem',
+        '2xl': '2.5rem',
+      },
+      screens: {
+        DEFAULT: '100%',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1024px',
+        '2xl': '1024px'
+      }
+    },
     extend: {
       colors: {
-        'text-main': '#404040',
-        'text-secondary': '#8C8C8C',
-        'text-tertiary': '#E7E7E7',
+        gray: {
+          50: '#F4F4F4',
+          100: '#EEEEEE',
+          200: '#E7E7E7',
+          300: '#D1D1D1',
+          400: '#BABABA',
+          500: '#8C8C8C',
+          600: '#666666',
+          700: '#535353',
+          800: '#404040',
+          900: '#3A3A3A',
+        },
+        purple: {
+          50: '#FCEDF6',
+          100: '#FBE0F0',
+          200: '#F9D3EA',
+          300: '#F5B9DD',
+          400: '#E096C3',
+          500: '#B6537F',
+          600: '#881E4E',
+          700: '#7B2157',
+          800: '#56173D',
+          900: '#300D22',
+        },
         canvas: '#F4F4F4',
-        'active-main': '#881E4E',
-        'active-secondary': '#E387B0',
-        'text-main': '#F5B9DD'
-      }
+      },
+      lineHeight: {
+        '20': '5rem',
+       }
     },
     fontFamily: {
       sans: [
@@ -41,6 +77,10 @@ module.exports = {
         '"Noto Color Emoji"'
       ],
     },
+    letterSpacing: {
+      tightest: '-.06em',
+      tighter: '-.04em',
+     }
   },
   plugins: [
     require('@tailwindcss/typography'),
