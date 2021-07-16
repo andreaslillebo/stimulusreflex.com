@@ -1,49 +1,167 @@
 <div class="h-full font-sans text-lg font-medium leading-8 tracking-tighter text-gray-800 bg-white">
-  <div class="container flex justify-between pl-0 mx-auto mb-10">
-    <%= image_tag "logo.svg" %>
-    <nav class="flex items-center space-x-2">
-      <a href="#" class="flex items-center text-purple-600 border-2 border-purple-300 rounded-lg">
-        <span class="p-1.5 pr-2">
-          <%= image_tag "github_logo.svg" %>
-        </span>
-        <span class="flex items-center pl-2 border-l-2 border-purple-300 ">
-          <i class="text-sm fas fa-star"></i>
-          <%#
-            TODO:
-            Dynamically fetch star count from:
-            https://api.github.com/repos/stimulusreflex/stimulus_reflex stargazers_count
-          %>
-          <span class="px-4 py-1 pl-2 text-lg font-semibold">1.8k</span>
-        </span>
-      </a>
-      <a href="#" class="inline-block px-4 py-1 text-lg font-semibold text-purple-600 bg-purple-300 border-2 border-purple-300 border-purple-400 rounded-lg">
-        Documentations
-      </a>
-    </nav>
-  </div>
-  <div class="container relative mx-auto">
-    <%= image_tag "request_cycle.svg", class: "float-right absolute right-0" %>
-    <h1 class="pt-20 mb-4 font-semibold text-purple-600 leading-20 text-7xl">
-      Return to the<br />
-      Golden Era of<br />
-      Web Development
-    </h1>
-    <h2 class="mb-6 text-2xl leading-8">
-      Build reactive apps with a<br />
-      server-rendered architecture.
-    </h2>
-    <a href="#" class="inline-block px-6 py-4 mb-12 text-2xl font-semibold text-purple-300 bg-purple-600 rounded-lg">Free Britney Now!</a>
-    <%= image_tag "chevron_down", class: "mb-16" %>
-  </div>
-  <div class="container mx-auto">
-    <div class="flex items-start">
-      <p>
-        StimulusReflex is an implementation for classic Rails architecture: Server sends a whole HTML to the browser, the browser displays it as is, JS listens to user’s input, notifies about them the server (Stimulus), server reacts on them appropriately and responds with a new page, or a piece of page to be rerendered (Reflex).
-      </p>
-      <div class="relative -mr-16">
-        <%= image_tag "stimulus_cycle", class: "max-w-none relative left-4" %>
-        <%= image_tag "beast_with_laptop", class: "max-w-none relative -top-20" %>
+  <section>
+    <div class="container flex justify-between pl-0 mx-auto mb-10">
+      <%= image_tag "logo.svg" %>
+      <nav class="flex items-center space-x-2">
+        <a href="#" class="flex items-center text-purple-600 border-2 border-purple-300 rounded-lg">
+          <span class="p-1.5 pr-2">
+            <%= image_tag "github_logo.svg" %>
+          </span>
+          <span class="flex items-center pl-2 border-l-2 border-purple-300 ">
+            <i class="text-sm fas fa-star"></i>
+            <%#
+              TODO:
+              Dynamically fetch star count from:
+              https://api.github.com/repos/stimulusreflex/stimulus_reflex stargazers_count
+            %>
+            <span class="px-4 py-1 pl-2 text-lg font-semibold">1.8k</span>
+          </span>
+        </a>
+        <a href="#" class="inline-block px-4 py-1 text-lg font-semibold text-purple-600 bg-purple-300 border-2 border-purple-300 border-purple-400 rounded-lg">
+          Documentations
+        </a>
+      </nav>
+    </div>
+    <div class="container relative mx-auto">
+      <%= image_tag "request_cycle.svg", class: "float-right absolute right-0" %>
+      <h1 class="pt-20 mb-4 font-semibold text-purple-600 leading-20 text-7xl">
+        Return to the<br />
+        Golden Era of<br />
+        Web Development
+      </h1>
+      <h2 class="mb-6 text-2xl leading-8">
+        Build reactive apps with a<br />
+        server-rendered architecture.
+      </h2>
+      <a href="#" class="inline-block px-6 py-4 mb-12 text-2xl font-semibold text-purple-300 bg-purple-600 rounded-lg">Free Britney Now!</a>
+      <%= image_tag "icons/chevron_down", class: "mb-16" %>
+    </div>
+    <div class="container mx-auto">
+      <div class="flex items-start">
+        <p>
+          StimulusReflex is an implementation for classic Rails architecture: Server sends a whole HTML to the browser, the browser displays it as is, JS listens to user’s input, notifies about them the server (Stimulus), server reacts on them appropriately and responds with a new page, or a piece of page to be rerendered (Reflex).
+        </p>
+        <div class="relative -mb-56 -mr-16">
+          <%= image_tag "stimulus_cycle", class: "max-w-none relative left-4" %>
+          <%= image_tag "beast_with_laptop", class: "max-w-none relative -top-20" %>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="pt-8 bg-gray-50">
+    <div class="container mx-auto">
+      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl">
+        Better DX
+      </h2>
+      <pre class="px-8 py-6 mb-12 leading-6 tracking-normal bg-gray-800 rounded-3xl"><!--
+        --><code class="highlight stimulus_reflex"><!--
+          --><%= image_tag "icons/copy", class: "float-right" %><!--
+          --><%= render "code_sample", language: :ruby, colorscheme: "github" %><!--
+        --></code><!--
+      --></pre>
+      <h3 class="mb-4 text-3xl font-semibold">
+        Write less code
+      </h3>
+      <div class="grid grid-cols-3 gap-4 mb-20">
+        <div>
+          <h4 class="font-semibold">Server is the single source of truth</h4>
+          <p>
+            All state is maintained by the server. Any updated view content is automatically morphed on the client. No need for duplicating business logic on front-end side and keeping it synced with the server.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Only one language is required</h4>
+          <p>
+            StimulusReflex uses Ruby. A stable, well-maintained, robust language. Front-end side uses HTML and lightweight JavaScript generated by the server. JavaScript only monitors user inputs and notifies the server.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Send HTML to the web browser</h4>
+          <p>
+            Server composing a whole page code as HTML. No need for reimplementing basic web functionality in JavaScript.
+          </p>
+        </div>
+        <a href="#" class="flex items-center justify-between col-start-2 col-end-4 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+          See how to start to develop with StimulusReflex
+          <%= image_tag "icons/arrow_circle_right" %>
+        </a>
+      </div>
+      <h3 class="mb-4 text-3xl font-semibold">
+        Faster development
+      </h3>
+      <div class="grid grid-cols-3 gap-4 mb-20">
+        <div>
+          <h4 class="font-semibold">Tiny peripherals</h4>
+          <p>
+            You need only Redis or another DB. No GraphQL, Apollo, Redux, and other moving parts.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Well documented, 24/7 support</h4>
+          <p>
+            StimulusReflex is extremely well documented with current samples. Use Discord community for any additional questions.
+          </p>
+        </div>
+        <div class="row-span-2">
+          <h4 class="font-semibold">No inter-team syncranizations</h4>
+          <p>
+            Smaller team is needed. Since no logic is implemented on the front-end side, the front end teem is much smaller and does pretty isolated tasks. One person can confidently implement and deploy a complex feature.
+          </p>
+        </div>
+        <a href="#" class="flex items-center col-start-1 col-end-3 px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+          <%= image_tag "icons/discord" %>
+          <span class="flex items-center justify-between flex-grow">
+            Ask a question in Discord Community
+            <%= image_tag "icons/arrow_circle_right" %>
+          </span>
+        </a>
+      </div>
+      <h3 class="mb-2 text-3xl font-semibold">
+        Scalability
+      </h3>
+      <div class="grid grid-cols-3 gap-4 mb-20">
+        <%= image_tag "action_cable", class: "self-center" %>
+        <%= image_tag "any_cable", class: "self-center -mb-2" %>
+        <%= image_tag "any_cable_pro", class: "self-center" %>
+        <div>
+          <h4 class="font-semibold">ActionCable</h4>
+          <p>
+            For playground projects, use ActionCable – a default Rails module which is easy to start with.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">AnyCable</h4>
+          <p>
+            For production ready projects, use AnyCable. It outperforms ActionCable and gives you a real Real-time.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">AnyCable Pro</h4>
+          <p>
+            For high-loaded projects, use AnyCable Pro. It reduces memory usage, saves bandwidth and gives priority support by the developers.
+          </p>
+        </div>
+        <a href="#" class="flex items-center justify-between col-start-2 col-end-4 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+          Read more about AnyCable
+          <%= image_tag "icons/arrow_circle_right" %>
+        </a>
+      </div>
+      <h3 class="mb-6 text-3xl font-semibold">
+        Hot questions
+      </h3>
+      <div class="flex items-start mb-4">
+        <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">I’m working on a mature web app using React. Can I easily migrate to StimulusReflex?</span>
+        <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Unfortunately, you need to rewrite it. But you’ll reuse most of the code pieces.</span>
+      </div>
+      <div class="flex items-start mb-8 ml-20">
+        <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">I’m developing a real-time application with lots of interactions. Is StimulusReflex a good replacement for React?</span>
+        <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Sure it is! Use AnyCable library to get real-time updates.</span>
+      </div>
+      <div class="flex items-start mb-20 ml-8">
+        <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">My app is mobile first. Can I write is using StimulusReflex?</span>
+        <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Yes, you can. StimulusReflex supports native mobile platforms.</span>
+      </div>
+    </div>
+  </section>
 </div>

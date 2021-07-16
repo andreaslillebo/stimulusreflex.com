@@ -54,6 +54,10 @@ module.exports = {
         },
         canvas: '#F4F4F4',
       },
+      letterSpacing: {
+        tightest: '-.06em',
+        tighter: '-.04em',
+      },
       lineHeight: {
         '20': '5rem',
        }
@@ -77,10 +81,6 @@ module.exports = {
         '"Noto Color Emoji"'
       ],
     },
-    letterSpacing: {
-      tightest: '-.06em',
-      tighter: '-.04em',
-     }
   },
   plugins: [
     require('@tailwindcss/typography'),
