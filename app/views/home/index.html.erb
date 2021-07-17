@@ -49,7 +49,7 @@
     </div>
   </section>
 
-  <section class="pt-8 bg-gray-50">
+  <section class="pt-8 pb-20 mb-8 bg-gray-50">
     <div class="container mx-auto">
       <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl">
         Better DX
@@ -158,7 +158,90 @@
         <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">I’m developing a real-time application with lots of interactions. Is StimulusReflex a good replacement for React?</span>
         <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Sure it is! Use AnyCable library to get real-time updates.</span>
       </div>
-      <div class="flex items-start mb-20 ml-8">
+      <div class="flex items-start ml-8">
+        <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">My app is mobile first. Can I write is using StimulusReflex?</span>
+        <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Yes, you can. StimulusReflex supports native mobile platforms.</span>
+      </div>
+      <div class="relative">
+        <%= image_tag "beast_with_ice_cream", class: "absolute -right-8 -top-10" %>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="container mx-auto">
+      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl">
+        Better UX
+      </h2>
+      <h3 class="mb-4 text-3xl font-semibold">
+        Faster page loading and update
+      </h3>
+      <div class="grid grid-cols-3 gap-4 mb-20">
+        <div>
+          <h4 class="font-semibold">Pages load with no delay</h4>
+          <p>
+            HTML is rendered immediately by the browser, no intermediate JSON parsing.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Faster response</h4>
+          <p>
+            Round-trip actions and updates typically occur in 10-25ms, depending on geography.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Mobile devices support</h4>
+          <p>
+            Works greate on any, even the oldest ones, modile devices.
+          </p>
+        </div>
+        <a href="#" class="flex items-center justify-between col-span-2 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+          See demo
+          <%= image_tag "icons/arrow_circle_right" %>
+        </a>
+      </div>
+      <h3 class="mb-4 text-3xl font-semibold">
+        Saving traffic and battery
+      </h3>
+      <div class="grid grid-cols-3 gap-4 mb-20">
+        <div>
+          <h4 class="font-semibold">Tiny bundle size</h4>
+          <p>
+            Front-end part of the app is 10x smaller than while using React.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Less traffic per interaction</h4>
+          <p>
+            Client sends light-weight notifications. Data transferring is well-optimized.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Low battery usage</h4>
+          <p>
+            Very little CPU activity when serving HTML content to a browser save battery from draining.
+          </p>
+        </div>
+        <a href="#" class="flex items-center col-start-2 col-end-4 px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+          <%= image_tag "icons/play" %>
+          <span class="flex items-center justify-between flex-grow">
+            See video
+            <%= image_tag "icons/arrow_circle_right" %>
+          </span>
+        </a>
+      </div>
+      <h3 class="mb-6 text-3xl font-semibold">
+        Hot questions
+      </h3>
+      <div class="flex items-start mb-4">
+        <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">I’m working on a mature web app using React. Can I easily migrate to StimulusReflex?</span>
+        <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Unfortunately, you need to rewrite it. But you’ll reuse most of the code pieces.</span>
+      </div>
+      <div class="flex items-start mb-8 ml-20">
+        <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">I’m developing a real-time application with lots of interactions. Is StimulusReflex a good replacement for React?</span>
+        <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Sure it is! Use AnyCable library to get real-time updates.</span>
+      </div>
+      <div class="flex items-start ml-8">
         <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">My app is mobile first. Can I write is using StimulusReflex?</span>
         <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Yes, you can. StimulusReflex supports native mobile platforms.</span>
       </div>
