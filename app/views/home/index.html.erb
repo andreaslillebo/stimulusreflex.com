@@ -284,4 +284,122 @@
       </div>
     </div>
   </section>
+
+  <section>
+    <div class="container mx-auto">
+      <div class="grid grid-cols-3 gap-4 mb-20">
+        <div class="row-span-3">
+          <%= image_tag "cable_ready_logo", class: "mx-auto" %>
+        </div>
+        <div class="col-span-2">
+          <h3 class="mt-4 text-3xl font-semibold">
+            CableReady is ready to serve
+          </h3>
+        </div>
+        <div class="col-start-2">
+          <h4 class="font-semibold">Launch in days, not months</h4>
+          <p>
+            Less inter-team communication causes less delay and time to make an agreement.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Easy learning curve</h4>
+          <p>
+            Good documentations allow quick start and speeds up the development.
+          </p>
+        </div>
+        <a href="#" class="flex items-center justify-between col-start-2 col-end-4 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+          Read more about CableReady
+          <%= image_tag "icons/arrow_circle_right" %>
+        </a>
+      </div>
+      <div class="relative grid items-start grid-cols-3 gap-4 -mt-64 top-64">
+        <div class="p-8 mt-10 bg-white shadow-lg rounded-3xl">
+          <p>
+            More responsive screens, simpler code, amazing support.
+          </p>
+          <div class="flex items-center mt-6 space-x-4">
+            <%= image_tag "people/andrew_cetinic.jpg" %>
+            <span>
+              <span class="inline-block text-purple-600">Andrew Cetinic</span>
+              <span class="inline-block">CEO, <span class="text-purple-600">PeopleForce</span></span>
+            </span>
+          </div>
+        </div>
+        <div class="p-8 mt-20 bg-white shadow-lg rounded-3xl">
+          <p>
+            What matters is your productivity and how much you enjoy working with a library. I found myself very productive, and I really enjoyed it.
+          </p>
+          <div class="flex items-center mt-6 space-x-4">
+            <%= image_tag "people/sam_sweeney.jpg" %>
+            <span>
+              <span class="inline-block text-purple-600">Sam Sweeney</span>
+              <span class="inline-block">CEO, <span class="text-purple-600">Trivvy</span></span>
+            </span>
+          </div>
+        </div>
+        <div class="p-8 bg-white shadow-lg rounded-3xl">
+          <p>
+            SR saved my day, my (chunky) bacon, my sanity, my dignity, and who knows what else! What a time to be alive!
+          </p>
+          <div class="flex items-center mt-6 space-x-4">
+            <%= image_tag "people/trinity_takei.jpg" %>
+            <span>
+              <span class="inline-block text-purple-600">Trinity Takei</span>
+              <span class="inline-block">Lead Developer, <span class="text-purple-600">RCRDSHP</span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20 pt-14 bg-gray-50">
+    <div class="container mx-auto">
+      <h3 class="mt-64 mb-4 text-3xl font-semibold">
+        There are a few cases when StimulusReflex is not the best option
+      </h3>
+      <div class="grid grid-cols-3 gap-4 mb-20">
+        <div>
+          <h4 class="font-semibold">Offline first</h4>
+          <p>
+            If your application should work in offline mode, stick with React approach.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Games, 3D, AR/VR</h4>
+          <p>
+            Games and other highly interactive apps are not best fit to StimulusReflex.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Your team is mainly front-end</h4>
+          <p>
+            JS devs may find it hard to learn Rails.
+          </p>
+        </div>
+      </div>
+      <h3 class="mb-6 text-3xl font-semibold">
+        Subscribe for updates
+      </h3>
+      <%= form_with url: "#", method: :post, class: "mb-20 relative border-2 border-gray-500 rounded-3xl" do |form| %>
+        <%= form.text_field :email, class: "w-full p-6 pr-16 border-0 bg-transparent placeholder-gray-500 font-medium rounded-3xl", placeholder: "Your email" %>
+        <%= form.submit "Submit", type: :image, src: image_path("icons/arrow_circle_right"), class: "absolute pl-4 pr-6 right-0 top-1/2 -translate-y-1/2" %>
+      <% end %>
+
+      <hr class="mb-20 border-t-2 border-gray-300" />
+
+      <div class="flex justify-between">
+        <span>
+          © StimulusReflex, <%= Time.zone.now.year %>
+        </span>
+        <span class="flex space-x-4">
+          <a href="#" class="text-purple-600">GitHub</a>
+          <a href="#" class="text-purple-600">Documentation</a>
+          <a href="#" class="text-purple-600">CableReady</a>
+          <a href="#" class="text-purple-600">AnyCable</a>
+        </span>
+      </div>
+    </div>
+  </section>
 </div>
