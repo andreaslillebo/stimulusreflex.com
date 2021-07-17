@@ -1,0 +1,30 @@
+@layer utilities {
+  $breakpoints: sm md lg xl 2xl;
+
+  .grid-container {
+    display: grid;
+  }
+
+  .grid-container {
+    $breakpoint: 'DEFAULT';
+
+    $container-padding: theme('container.padding.#{$breakpoint}');
+    $container-max-width: theme('container.screens.#{$breakpoint}');
+    // The gutter should fill all the space outside of the container.
+    // The container has 2 gutters, so each must occupy half of this space.
+    // In addition, the scrollbar must be taken into account, which has a width of `100vw - 100%`.
+    --gutter: calc((100vw - (#{$container-max-width} - (#{$container-padding} * 2)) - (100vw - 100%))/2);
+    grid-template-columns: var(--gutter) auto auto var(--gutter);
+  }
+
+  @each $breakpoint in $breakpoints {
+    @screen #{$breakpoint} {
+      .grid-container {
+        $container-padding: theme('container.padding.#{$breakpoint}');
+        $container-max-width: theme('container.screens.#{$breakpoint}');
+        --gutter: calc((100vw - (#{$container-max-width} - (#{$container-padding} * 2)) - (100vw - 100%))/2);
+        grid-template-columns: var(--gutter) auto auto var(--gutter);
+      }
+    }
+  }
+}

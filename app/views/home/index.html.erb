@@ -5,7 +5,7 @@
         <%= image_tag "logo.svg" %>
       <% end %>
       <nav class="flex items-center space-x-2">
-        <a href="https://github.com/stimulusreflex/stimulus_reflex" class="flex items-center text-purple-600 border-2 border-purple-300 rounded-lg">
+        <a href="https://github.com/stimulusreflex/stimulus_reflex" class="items-center hidden text-purple-600 border-2 border-purple-300 rounded-lg sm:flex">
           <span class="p-1.5 pr-2">
             <%= image_tag "github_logo.svg" %>
           </span>
@@ -28,11 +28,11 @@
       </nav>
     </div>
     <div class="container relative mx-auto">
-      <%= image_tag "request_cycle.svg", class: "float-right absolute right-0" %>
-      <h1 class="pt-20 mb-4 font-semibold text-purple-600 leading-20 text-7xl">
-        Return to the<br />
-        Golden Era of<br />
-        Web Development
+      <%= image_tag "request_cycle.svg", class: "absolute hidden md:block right-0 w-1/4 lg:w-max" %>
+      <h1 class="mb-4 font-semibold text-purple-600 md:pt-20 leading-20 text-7xl tracking-tightest">
+        Return to<br class="inline md:hidden" /> the<br class="hidden md:inline" />
+        Golden<br class="inline md:hidden" /> Era of<br class="hidden md:inline" />
+        Web<br class="inline md:hidden" /> Development
       </h1>
       <h2 class="mb-6 text-2xl leading-8">
         Build reactive apps with a<br />
@@ -41,25 +41,28 @@
       <a href="https://docs.stimulusreflex.com/" class="inline-block px-6 py-4 mb-12 text-2xl font-semibold text-purple-300 bg-purple-600 rounded-lg">Free Britney Now!</a>
       <%= image_tag "icons/chevron_down", class: "mb-16" %>
     </div>
-    <div class="container mx-auto">
-      <div class="flex items-start">
-        <p>
-          StimulusReflex is an implementation for classic Rails architecture: Server sends a whole HTML to the browser, the browser displays it as is, JS listens to user’s input, notifies about them the server (Stimulus), server reacts on them appropriately and responds with a new page, or a piece of page to be rerendered (Reflex).
-        </p>
-        <%# `pointer-events-none` is added since a transparent part of the image covers the code-copy button %>
-        <div class="relative -mb-56 -mr-16 pointer-events-none">
-          <%= image_tag "stimulus_cycle", class: "max-w-none relative left-4" %>
-          <%= image_tag "beast_with_laptop", class: "max-w-none relative -top-20" %>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <section class="pt-8 pb-20 mb-8 bg-gray-50">
-    <div class="container mx-auto">
-      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl">
+  <div class="grid-container">
+    <div class="col-start-2 row-span-2 mb-4">
+      <p>
+        StimulusReflex is an implementation for classic Rails architecture: Server sends a whole HTML to the browser, the browser displays it as is, JS listens to user’s input, notifies about them the server (Stimulus), server reacts on them appropriately and responds with a new page, or a piece of page to be rerendered (Reflex).
+      </p>
+    </div>
+    <%= image_tag "stimulus_cycle", class: "hidden md:inline-block" %>
+    <div class="row-start-3 bg-gray-50 col-span-full"></div>
+    <div class="col-start-2 row-start-3">
+      <h2 class="self-end mt-8 mb-4 font-semibold text-purple-600 leading-20 text-7xl tracking-tightest">
         Better DX
       </h2>
+    </div>
+    <div class="flex items-end justify-center col-start-3 row-span-2 row-start-2">
+      <%= image_tag "beast_with_laptop", class: "hidden md:inline-block" %>
+    </div>
+  </div>
+
+  <section class="pt-4 pb-20 mb-8 bg-gray-50">
+    <div class="container mx-auto">
       <pre class="px-8 py-6 mb-12 leading-6 tracking-normal bg-gray-800 rounded-3xl"><!--
         --><code
           class="highlight stimulus_reflex"
@@ -180,7 +183,7 @@
 
   <section class="pb-20">
     <div class="container mx-auto">
-      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl">
+      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl tracking-tightest">
         Better UX
       </h2>
       <h3 class="mb-4 text-3xl font-semibold">
@@ -260,7 +263,7 @@
 
   <section class="pt-8 pb-20 mb-8 bg-gray-50">
     <div class="container mx-auto">
-      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl">
+      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl tracking-tightest">
         Cost Saving
       </h2>
       <h3 class="mb-4 text-3xl font-semibold">
