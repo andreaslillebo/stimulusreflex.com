@@ -26,6 +26,9 @@ module.exports = {
         '2xl': '1024px'
       }
     },
+    cursor: {
+      copy: 'copy',
+    },
     extend: {
       colors: {
         gray: {

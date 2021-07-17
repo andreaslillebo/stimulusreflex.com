@@ -46,7 +46,8 @@
         <p>
           StimulusReflex is an implementation for classic Rails architecture: Server sends a whole HTML to the browser, the browser displays it as is, JS listens to user’s input, notifies about them the server (Stimulus), server reacts on them appropriately and responds with a new page, or a piece of page to be rerendered (Reflex).
         </p>
-        <div class="relative -mb-56 -mr-16">
+        <%# `pointer-events-none` is added since a transparent part of the image covers the code-copy button %>
+        <div class="relative -mb-56 -mr-16 pointer-events-none">
           <%= image_tag "stimulus_cycle", class: "max-w-none relative left-4" %>
           <%= image_tag "beast_with_laptop", class: "max-w-none relative -top-20" %>
         </div>
@@ -60,8 +61,12 @@
         Better DX
       </h2>
       <pre class="px-8 py-6 mb-12 leading-6 tracking-normal bg-gray-800 rounded-3xl"><!--
-        --><code class="highlight stimulus_reflex"><!--
-          --><%= image_tag "icons/copy", class: "float-right" %><!--
+        --><code
+          class="highlight stimulus_reflex"
+          data-controller="code"
+        ><!--
+          --><%= image_tag "icons/copy", class: "float-right cursor-copy", "data-action": "click->code#copy" %><!--
+          --><div class="hidden" data-code-target="code"><%= render "code_sample" %></div><!--
           --><%= render "code_sample", language: :ruby, colorscheme: "github" %><!--
         --></code><!--
       --></pre>
