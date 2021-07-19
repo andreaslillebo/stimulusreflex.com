@@ -61,7 +61,7 @@
     </div>
   </div>
 
-  <section class="pt-4 pb-20 mb-8 bg-gray-50">
+  <section class="pt-4 bg-gray-50">
     <div class="container mx-auto">
       <div data-controller="code" class="relative mb-12 overflow-hidden leading-6 tracking-normal bg-gray-800 rounded-3xl">
         <%= image_tag "icons/copy", class: "absolute top-4 right-4 z-30 cursor-copy", "data-action": "click->code#copy" %>
@@ -78,7 +78,7 @@
       <h3 class="mb-4 text-3xl font-semibold">
         Write less code
       </h3>
-      <div class="grid grid-cols-3 gap-4 mb-20">
+      <div class="grid grid-cols-1 gap-4 mb-20 md:grid-cols-3">
         <div>
           <h4 class="font-semibold">Server is the single source of truth</h4>
           <p>
@@ -97,7 +97,7 @@
             Server composing a whole page code as HTML. No need for reimplementing basic web functionality in JavaScript.
           </p>
         </div>
-        <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between col-start-2 col-end-4 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+        <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 md:col-start-2 rounded-3xl">
           See how to start to develop with StimulusReflex
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
@@ -105,7 +105,7 @@
       <h3 class="mb-4 text-3xl font-semibold">
         Faster development
       </h3>
-      <div class="grid grid-cols-3 gap-4 mb-20">
+      <div class="grid grid-cols-1 gap-4 mb-20 md:grid-cols-3">
         <div>
           <h4 class="font-semibold">Tiny peripherals</h4>
           <p>
@@ -118,13 +118,13 @@
             StimulusReflex is extremely well documented with current samples. Use Discord community for any additional questions.
           </p>
         </div>
-        <div class="row-span-2">
+        <div class="md:row-span-2">
           <h4 class="font-semibold">No inter-team syncranizations</h4>
           <p>
             Smaller team is needed. Since no logic is implemented on the front-end side, the front end teem is much smaller and does pretty isolated tasks. One person can confidently implement and deploy a complex feature.
           </p>
         </div>
-        <a href="https://discord.gg/stimulus-reflex" class="flex items-center col-start-1 col-end-3 px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+        <a href="https://discord.gg/stimulus-reflex" class="flex items-center col-start-1 px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 rounded-3xl">
           <%= image_tag "icons/discord" %>
           <span class="flex items-center justify-between flex-grow">
             Ask a question in Discord Community
@@ -132,32 +132,32 @@
           </span>
         </a>
       </div>
-      <h3 class="mb-2 text-3xl font-semibold">
+      <h3 class="mb-4 text-3xl font-semibold">
         Scalability
       </h3>
-      <div class="grid grid-cols-3 gap-4 mb-20">
-        <%= image_tag "action_cable", class: "self-center" %>
-        <%= image_tag "any_cable", class: "self-center -mb-2" %>
-        <%= image_tag "any_cable_pro", class: "self-center" %>
-        <div>
+      <div class="grid grid-cols-1 gap-4 mb-20 md:grid-cols-3">
+        <%= image_tag "action_cable", class: "self-center col-start-1" %>
+        <div class="mb-4">
           <h4 class="font-semibold">ActionCable</h4>
           <p>
             For playground projects, use ActionCable – a default Rails module which is easy to start with.
           </p>
         </div>
-        <div>
+        <%= image_tag "any_cable", class: "self-center -mb-2 md:row-start-1 md:col-start-2" %>
+        <div class="mb-4">
           <h4 class="font-semibold">AnyCable</h4>
           <p>
             For production ready projects, use AnyCable. It outperforms ActionCable and gives you a real Real-time.
           </p>
         </div>
-        <div>
+        <%= image_tag "any_cable_pro", class: "self-center md:row-start-1 md:col-start-3" %>
+        <div class="mb-4">
           <h4 class="font-semibold">AnyCable Pro</h4>
           <p>
             For high-loaded projects, use AnyCable Pro. It reduces memory usage, saves bandwidth and gives priority support by the developers.
           </p>
         </div>
-        <a href="https://anycable.io/" class="flex items-center justify-between col-start-2 col-end-4 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+        <a href="https://anycable.io/" class="flex items-center justify-between px-6 py-4 pr-5 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl">
           Read more about AnyCable
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
@@ -177,21 +177,29 @@
         <span class="px-6 py-4 -mr-2 bg-gray-200 rounded-3xl">My app is mobile first. Can I write is using StimulusReflex?</span>
         <span class="px-6 py-4 mt-4 -ml-2 bg-purple-300 rounded-3xl">Yes, you can. StimulusReflex supports native mobile platforms.</span>
       </div>
-      <div class="relative">
-        <%= image_tag "beast_with_ice_cream", class: "absolute -right-8 -top-10" %>
-      </div>
     </div>
   </section>
 
-  <section class="pb-20">
-    <div class="container mx-auto">
-      <h2 class="mb-8 font-semibold text-purple-600 leading-20 text-7xl tracking-tightest">
+  <div class="grid-container">
+    <div class="h-20 row-start-1 bg-gray-50 col-span-full"></div>
+    <div class="col-start-2 row-start-2">
+      <h2 class="mt-8 mb-8 font-semibold text-purple-600 leading-20 text-7xl tracking-tightest">
         Better UX
       </h2>
+    </div>
+    <div class="col-start-2 row-start-3">
       <h3 class="mb-4 text-3xl font-semibold">
         Faster page loading and update
       </h3>
-      <div class="grid grid-cols-3 gap-4 mb-20">
+    </div>
+    <div class="col-start-3 row-span-3 row-start-1 pt-4 justify-self-center">
+      <%= image_tag "beast_with_ice_cream" %>
+    </div>
+  </div>
+
+  <section class="pb-20">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 gap-4 mb-20 md:grid-cols-3">
         <div>
           <h4 class="font-semibold">Pages load with no delay</h4>
           <p>
@@ -210,7 +218,7 @@
             Works greate on any, even the oldest ones, modile devices.
           </p>
         </div>
-        <a href="http://expo.stimulusreflex.com/" class="flex items-center justify-between col-span-2 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+        <a href="http://expo.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 rounded-3xl">
           See demo
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
@@ -218,7 +226,7 @@
       <h3 class="mb-4 text-3xl font-semibold">
         Saving traffic and battery
       </h3>
-      <div class="grid grid-cols-3 gap-4 mb-20">
+      <div class="grid grid-cols-1 gap-4 mb-20 md:grid-cols-3">
         <div>
           <h4 class="font-semibold">Tiny bundle size</h4>
           <p>
@@ -237,7 +245,7 @@
             Very little CPU activity when serving HTML content to a browser save battery from draining.
           </p>
         </div>
-        <a href="https://docs.stimulusreflex.com/#build-the-next-twitter-in-just-9-minutes-or-less" class="flex items-center col-start-2 col-end-4 px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+        <a href="https://docs.stimulusreflex.com/#build-the-next-twitter-in-just-9-minutes-or-less" class="flex items-center px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl">
           <%= image_tag "icons/play" %>
           <span class="flex items-center justify-between flex-grow">
             See video
@@ -271,7 +279,7 @@
       <h3 class="mb-4 text-3xl font-semibold">
         Smaller team doing more
       </h3>
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div>
           <h4 class="font-semibold">No need for high-skilled front-end</h4>
           <p>
@@ -290,8 +298,8 @@
             Good documentations allow quick start and speeds up the development.
           </p>
         </div>
-        <span class="col-span-3">
-          <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between w-2/3 col-start-2 col-end-4 px-6 py-4 pr-5 mx-auto mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+        <span class="col-span-full">
+          <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mx-auto mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:w-2/3 rounded-3xl">
             See how to start to develop with StimulusReflex
             <%= image_tag "icons/arrow_circle_right" %>
           </a>
@@ -302,16 +310,16 @@
 
   <section>
     <div class="container mx-auto">
-      <div class="grid grid-cols-3 gap-4 mb-20">
-        <div class="row-span-3">
+      <div class="grid grid-cols-1 gap-4 mb-20 md:grid-cols-3">
+        <div class="md:row-span-3">
           <%= image_tag "cable_ready_logo", class: "mx-auto" %>
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <h3 class="mt-4 text-3xl font-semibold">
             CableReady is ready to serve
           </h3>
         </div>
-        <div class="col-start-2">
+        <div class="md:col-start-2">
           <h4 class="font-semibold">Launch in days, not months</h4>
           <p>
             Less inter-team communication causes less delay and time to make an agreement.
@@ -323,32 +331,32 @@
             Good documentations allow quick start and speeds up the development.
           </p>
         </div>
-        <a href="https://cableready.stimulusreflex.com/" class="flex items-center justify-between col-start-2 col-end-4 px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 rounded-3xl">
+        <a href="https://cableready.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl">
           Read more about CableReady
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
       </div>
-      <div class="relative grid items-start grid-cols-3 gap-4 -mt-64 top-64">
-        <div class="p-8 mt-10 bg-white shadow-lg rounded-3xl">
+      <div class="relative grid items-start grid-cols-1 gap-4 -mt-64 md:grid-cols-3 top-64">
+        <div class="p-8 bg-white shadow-lg md:mt-10 rounded-3xl">
           <p>
             More responsive screens, simpler code, amazing support.
           </p>
           <div class="flex items-center mt-6 space-x-4">
             <%= image_tag "people/andrew_cetinic.jpg" %>
             <span>
-              <span class="inline-block text-purple-600">Andrew Cetinic</span>
+              <span class="inline-block text-purple-600">Andrew Cetinic</span><br />
               <span class="inline-block">CEO, <span class="text-purple-600">PeopleForce</span></span>
             </span>
           </div>
         </div>
-        <div class="p-8 mt-20 bg-white shadow-lg rounded-3xl">
+        <div class="p-8 bg-white shadow-lg md:mt-20 rounded-3xl">
           <p>
             What matters is your productivity and how much you enjoy working with a library. I found myself very productive, and I really enjoyed it.
           </p>
           <div class="flex items-center mt-6 space-x-4">
             <%= image_tag "people/sam_sweeney.jpg" %>
             <span>
-              <span class="inline-block text-purple-600">Sam Sweeney</span>
+              <span class="inline-block text-purple-600">Sam Sweeney</span><br />
               <span class="inline-block">CEO, <span class="text-purple-600">Trivvy</span></span>
             </span>
           </div>
@@ -360,7 +368,7 @@
           <div class="flex items-center mt-6 space-x-4">
             <%= image_tag "people/trinity_takei.jpg" %>
             <span>
-              <span class="inline-block text-purple-600">Trinity Takei</span>
+              <span class="inline-block text-purple-600">Trinity Takei</span><br />
               <span class="inline-block">Lead Developer, <span class="text-purple-600">RCRDSHP</span></span>
             </span>
           </div>
@@ -374,7 +382,7 @@
       <h3 class="mt-64 mb-4 text-3xl font-semibold">
         There are a few cases when StimulusReflex is not the best option
       </h3>
-      <div class="grid grid-cols-3 gap-4 mb-20">
+      <div class="grid grid-cols-1 gap-4 mb-20 md:grid-cols-3">
         <div>
           <h4 class="font-semibold">Offline first</h4>
           <p>
@@ -404,15 +412,15 @@
 
       <hr class="mb-20 border-t-2 border-gray-300" />
 
-      <div class="flex justify-between">
+      <div class="flex flex-col justify-between md:flex-row">
         <span>
           © StimulusReflex, <%= Time.zone.now.year %>
         </span>
-        <span class="flex space-x-4">
-          <a href="https://github.com/stimulusreflex/stimulus_reflex" class="text-purple-600">GitHub</a>
-          <a href="https://docs.stimulusreflex.com/" class="text-purple-600">Documentation</a>
-          <a href="https://cableready.stimulusreflex.com/" class="text-purple-600">CableReady</a>
-          <a href="https://anycable.io/" class="text-purple-600">AnyCable</a>
+        <span class="flex flex-col md:flex-row">
+          <a href="https://github.com/stimulusreflex/stimulus_reflex" class="mr-4 text-purple-600">GitHub</a>
+          <a href="https://docs.stimulusreflex.com/" class="mr-4 text-purple-600">Documentation</a>
+          <a href="https://cableready.stimulusreflex.com/" class="mr-4 text-purple-600">CableReady</a>
+          <a href="https://anycable.io/" class="mr-4 text-purple-600">AnyCable</a>
         </span>
       </div>
     </div>
