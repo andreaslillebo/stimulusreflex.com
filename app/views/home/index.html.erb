@@ -63,16 +63,18 @@
 
   <section class="pt-4 pb-20 mb-8 bg-gray-50">
     <div class="container mx-auto">
-      <pre class="px-8 py-6 mb-12 leading-6 tracking-normal bg-gray-800 rounded-3xl"><!--
-        --><code
-          class="highlight stimulus_reflex"
-          data-controller="code"
-        ><!--
-          --><%= image_tag "icons/copy", class: "float-right cursor-copy", "data-action": "click->code#copy" %><!--
-          --><div class="hidden" data-code-target="code"><%= render "code_sample" %></div><!--
-          --><%= render "code_sample", language: :ruby, colorscheme: "github" %><!--
-        --></code><!--
-      --></pre>
+      <div data-controller="code" class="relative mb-12 overflow-hidden leading-6 tracking-normal bg-gray-800 rounded-3xl">
+        <%= image_tag "icons/copy", class: "absolute top-4 right-4 z-30 cursor-copy", "data-action": "click->code#copy" %>
+        <pre class="px-8 py-6 overflow-x-auto"><!--
+          --><code
+            class="relative block pr-8 w-max highlight stimulus_reflex"
+          ><!--
+            --><div class="hidden" data-code-target="code"><%= render "code_sample" %></div><!--
+            --><%= render "code_sample", language: :ruby, colorscheme: "github" %><!--
+          --></code><!--
+          --><div class="absolute top-0 bottom-0 right-0 pointer-events-none bg-gradient-to-r from-transparent to-gray-800 w-14"></div><!--
+        --></pre>
+        </div>
       <h3 class="mb-4 text-3xl font-semibold">
         Write less code
       </h3>
