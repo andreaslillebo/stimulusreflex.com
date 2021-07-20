@@ -5,11 +5,11 @@
         <%= image_tag "logo.svg" %>
       <% end %>
       <nav class="flex items-center space-x-2">
-        <a href="https://github.com/stimulusreflex/stimulus_reflex" class="items-center hidden text-purple-600 border-2 border-purple-300 rounded-lg sm:flex">
+        <a href="https://github.com/stimulusreflex/stimulus_reflex" class="items-center hidden text-purple-600 border-2 border-purple-300 rounded-lg sm:flex hover:text-purple-500">
           <span class="p-1.5 pr-2">
             <%= image_tag "github_logo.svg" %>
           </span>
-          <span class="flex items-center pl-2 border-l-2 border-purple-300 ">
+          <span class="flex items-center pl-2 border-l-2 border-purple-300">
             <i class="text-sm fas fa-star"></i>
             <span
               class="px-4 py-1 pl-2 text-lg font-semibold"
@@ -21,7 +21,7 @@
         </a>
         <a
           href="https://docs.stimulusreflex.com/"
-          class="inline-block px-4 py-1 text-lg font-semibold text-purple-600 bg-purple-300 border-2 border-purple-300 border-purple-400 rounded-lg"
+          class="inline-block px-4 py-1 text-lg font-semibold text-purple-600 bg-purple-300 border-2 border-purple-300 border-purple-400 rounded-lg hover:text-purple-500 hover:bg-purple-200"
         >
           Documentations
         </a>
@@ -38,7 +38,7 @@
         Build reactive apps with a<br />
         server-rendered architecture.
       </h2>
-      <a href="https://docs.stimulusreflex.com/" class="inline-block px-6 py-4 mb-12 text-2xl font-semibold text-purple-300 bg-purple-600 rounded-lg">Free Britney Now!</a>
+      <a href="https://docs.stimulusreflex.com/" class="inline-block px-6 py-4 mb-12 text-2xl font-semibold text-purple-300 bg-purple-600 rounded-lg hover:text-purple-200 hover:bg-purple-500">Free Britney Now!</a>
       <%= image_tag "icons/chevron_down", class: "mb-16" %>
     </div>
   </section>
@@ -64,7 +64,7 @@
   <section class="pt-4 bg-gray-50">
     <div class="container mx-auto">
       <div data-controller="code" class="relative mb-12 overflow-hidden leading-6 tracking-normal bg-gray-800 rounded-3xl">
-        <%= image_tag "icons/copy", class: "absolute top-4 right-4 z-30 cursor-copy", "data-action": "click->code#copy" %>
+        <%= image_tag "icons/copy", class: "absolute top-4 right-4 z-30 hover:mix-blend-screen cursor-copy", "data-action": "click->code#copy" %>
         <pre class="px-8 py-6 overflow-x-auto"><!--
           --><code
             class="relative block pr-8 w-max highlight stimulus_reflex"
@@ -97,7 +97,7 @@
             Server composing a whole page code as HTML. No need for reimplementing basic web functionality in JavaScript.
           </p>
         </div>
-        <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 md:col-start-2 rounded-3xl">
+        <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 md:col-start-2 rounded-3xl hover:text-purple-500 hover:border-purple-400">
           See how to start to develop with StimulusReflex
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
@@ -124,7 +124,7 @@
             Smaller team is needed. Since no logic is implemented on the front-end side, the front end teem is much smaller and does pretty isolated tasks. One person can confidently implement and deploy a complex feature.
           </p>
         </div>
-        <a href="https://discord.gg/stimulus-reflex" class="flex items-center col-start-1 px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 rounded-3xl">
+        <a href="https://discord.gg/stimulus-reflex" class="flex items-center col-start-1 px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 rounded-3xl hover:text-purple-500 hover:border-purple-400">
           <%= image_tag "icons/discord" %>
           <span class="flex items-center justify-between flex-grow">
             Ask a question in Discord Community
@@ -157,7 +157,7 @@
             For high-loaded projects, use AnyCable Pro. It reduces memory usage, saves bandwidth and gives priority support by the developers.
           </p>
         </div>
-        <a href="https://anycable.io/" class="flex items-center justify-between px-6 py-4 pr-5 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl">
+        <a href="https://anycable.io/" class="flex items-center justify-between px-6 py-4 pr-5 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl hover:text-purple-500 hover:border-purple-400">
           Read more about AnyCable
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
@@ -218,7 +218,7 @@
             Works greate on any, even the oldest ones, modile devices.
           </p>
         </div>
-        <a href="http://expo.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 rounded-3xl">
+        <a href="http://expo.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-span-2 rounded-3xl hover:text-purple-500 hover:border-purple-400">
           See demo
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
@@ -245,7 +245,7 @@
             Very little CPU activity when serving HTML content to a browser save battery from draining.
           </p>
         </div>
-        <a href="https://docs.stimulusreflex.com/#build-the-next-twitter-in-just-9-minutes-or-less" class="flex items-center px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl">
+        <a href="https://docs.stimulusreflex.com/#build-the-next-twitter-in-just-9-minutes-or-less" class="flex items-center px-4 py-4 pr-5 space-x-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl hover:text-purple-500 hover:border-purple-400">
           <%= image_tag "icons/play" %>
           <span class="flex items-center justify-between flex-grow">
             See video
@@ -299,7 +299,7 @@
           </p>
         </div>
         <span class="col-span-full">
-          <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mx-auto mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:w-2/3 rounded-3xl">
+          <a href="https://docs.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mx-auto mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:w-2/3 rounded-3xl hover:text-purple-500 hover:border-purple-400">
             See how to start to develop with StimulusReflex
             <%= image_tag "icons/arrow_circle_right" %>
           </a>
@@ -331,7 +331,7 @@
             Good documentations allow quick start and speeds up the development.
           </p>
         </div>
-        <a href="https://cableready.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl">
+        <a href="https://cableready.stimulusreflex.com/" class="flex items-center justify-between px-6 py-4 pr-5 mt-4 font-semibold text-purple-600 border-2 border-purple-300 md:col-start-2 md:col-span-2 rounded-3xl hover:text-purple-500 hover:border-purple-400">
           Read more about CableReady
           <%= image_tag "icons/arrow_circle_right" %>
         </a>
@@ -405,8 +405,8 @@
       <h3 class="mb-6 text-3xl font-semibold">
         Subscribe for updates
       </h3>
-      <%= form_with url: "#", method: :post, class: "mb-20 relative border-2 border-gray-500 rounded-3xl" do |form| %>
-        <%= form.text_field :email, class: "w-full p-6 pr-16 border-0 bg-transparent placeholder-gray-500 font-medium rounded-3xl", placeholder: "Your email" %>
+      <%= form_with url: "#", method: :post, class: "mb-20 relative rounded-3xl" do |form| %>
+        <%= form.text_field :email, class: "w-full p-6 pr-16 border-0 bg-transparent placeholder-gray-500 font-medium ring-gray-500 rounded-3xl ring-2 focus:ring-2 focus:ring-purple-600", placeholder: "Your email" %>
         <%= form.submit "Submit", type: :image, src: image_path("icons/arrow_circle_right"), class: "absolute pl-4 pr-6 right-0 top-1/2 -translate-y-1/2" %>
       <% end %>
 
@@ -417,10 +417,10 @@
           © StimulusReflex, <%= Time.zone.now.year %>
         </span>
         <span class="flex flex-col md:flex-row">
-          <a href="https://github.com/stimulusreflex/stimulus_reflex" class="mr-4 text-purple-600">GitHub</a>
-          <a href="https://docs.stimulusreflex.com/" class="mr-4 text-purple-600">Documentation</a>
-          <a href="https://cableready.stimulusreflex.com/" class="mr-4 text-purple-600">CableReady</a>
-          <a href="https://anycable.io/" class="mr-4 text-purple-600">AnyCable</a>
+          <a href="https://github.com/stimulusreflex/stimulus_reflex" class="mr-4 text-purple-600 hover:text-purple-500">GitHub</a>
+          <a href="https://docs.stimulusreflex.com/" class="mr-4 text-purple-600 hover:text-purple-500">Documentation</a>
+          <a href="https://cableready.stimulusreflex.com/" class="mr-4 text-purple-600 hover:text-purple-500">CableReady</a>
+          <a href="https://anycable.io/" class="mr-4 text-purple-600 hover:text-purple-500">AnyCable</a>
         </span>
       </div>
     </div>
