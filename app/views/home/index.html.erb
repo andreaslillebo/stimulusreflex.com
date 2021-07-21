@@ -44,20 +44,22 @@
   </section>
 
   <div class="grid-container">
-    <div class="col-start-2 row-span-2 mb-4">
+    <div class="col-start-2 col-end-4 row-start-1 mb-4 sm:col-end-3 sm:row-span-2">
       <p>
         StimulusReflex is an implementation for classic Rails architecture: Server sends a whole HTML to the browser, the browser displays it as is, JS listens to user’s input, notifies about them the server (Stimulus), server reacts on them appropriately and responds with a new page, or a piece of page to be rerendered (Reflex).
       </p>
     </div>
-    <%= image_tag "stimulus_cycle", class: "hidden md:inline-block" %>
+    <div class="col-start-2 row-start-2 sm:row-start-1 sm:col-start-3">
+      <%= image_tag "stimulus_cycle" %>
+    </div>
     <div class="row-start-3 bg-gray-50 col-span-full"></div>
     <div class="col-start-2 row-start-3">
       <h2 class="self-end mt-8 mb-4 text-5xl font-semibold leading-snug text-purple-600 sm:leading-20 sm:text-7xl tracking-tightest">
         Better DX
       </h2>
     </div>
-    <div class="flex items-end justify-center col-start-3 row-span-2 row-start-2">
-      <%= image_tag "beast_with_laptop", class: "hidden md:inline-block" %>
+    <div class="flex items-end justify-center col-start-3 row-start-2 row-end-5 pl-4 sm:row-start-2 sm:row-end-4">
+      <%= image_tag "beast_with_laptop" %>
     </div>
   </div>
 
